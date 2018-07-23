@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <meta charset="utf-8">
+    </head>
+    <body>
+ <div class="container">
+     <fieldset>
+         <legend>
+             Graficó
+         </legend>
+ 
+    <div class="form-group col-md-3">
+        <label>Valor A</label>
+        <input type="text" class="form-control"   name="a" id="a">
+    </div>   
+    <div class="form-group col-md-3">
+        <label>Valor B</label>
+        <input type="text" class="form-control"   name="b" id="b">
+    </div>  
+    <div class="form-group col-md-3">
+        <label>Valor C</label>
+        <input type="text" class="form-control"   name="c" id="c">
+    </div>
+    <div class="form-group col-md-3">    
+        <br>
+        <button onclick="ReferscarValores()" class="btn btn-success">Actualizar</button>
+    </div> 
+    
+  <div style="height: 50px;width:700">
+        <canvas id="grafica" ></canvas>
+  </div>
+</fieldset>
+ </div>
+    </body>
+</html>
+<script type="text/javascript">
+  var ctx = document.getElementById("grafica").getContext('2d');
+  
+function ReferscarValores(){
+    var  valorA = document.getElementById("a").value;
+    var valorB = document.getElementById("b").value;
+    var valorC = document.getElementById("c").value; 
+           
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ["a", "b", "c"],
+        datasets: [{
+            label: '# grafico',
+            data: [valorA, valorB, valorC],
+            backgroundColor: [
+            "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
+            ],
+            borderColor: [
+            "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"
+            ],
+            borderWidth: 1
+        }]
+    },
+    
+});
+    }
+  
+
+</script>
