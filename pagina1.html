@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"></meta>
+
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    ></meta>
+
+    <title>servio al ciudado</title>
+    <script src="http://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+    
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    ></meta>
+
+    <link
+        rel="stylesheet"
+        type="text/css"
+        media="screen"
+        href="..//css/pagina1.css"
+    ></link>
+
+    <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="Sin título-3.ico"
+    ></link>
+
+</head>
+
+<body>
+    <div class="logo1">
+        <img
+            src="../html/Serv-ciudadano_HTML.jpg"
+            class="logo"
+        >
+    </div>
+
+    <div class="parte1">
+        <h1>www.ciudada.no.com.do</h1>
+    </div>
+
+
+<div class="container">  
+
+<input id="txtEmail" type="email" placecholder="Email">
+<input id="txtPassword" type="password" placecholder="Contraseña">
+<button id="btnLogin" class="btn btn-action" >Login</button>
+<button id="btnSignUp"class="btn btn-secondary"> Registrarse</button>
+<button id="contrasena"class="password"> Cambiar contraseña</button>
+
+<a href="file:///C:/Users/dlorenzo/Desktop/proyecto%20final/html/recuperar%20contrasena.html"class="cuenta">Mi cuenta</a>
+<a href="file:///C:/Users/dlorenzo/Desktop/proyecto%20final/html/contacto.html"class="cuenta1">Contacto</a>
+<a href="file:///C:/Users/dlorenzo/Desktop/proyecto%20final/html/admin.html"class="cuenta2">Admin</a>
+
+</div>
+
+</body>
+
+
+
+
+    <div class="slider">
+        <ul>
+            <li>
+                <img
+                    src="atencion.jpg"
+                    alt=""
+                >
+            </li>
+
+            <li>
+                <img
+                    src="center_SE_Cundinamarca.jpg"
+                    alt=""
+                >
+            </li>
+
+            <li>
+                <img
+                    src="Sin título-2.jpg"
+                    alt=""
+                >
+            </li>
+
+            <li>
+                <img
+                    src="Sin título-3.jpg"
+                    alt=""
+                >
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <!-- ENLACES -->
+
+        <div class="enlace">
+            <h1>Casos Registrados</h1>
+
+            <a href="https://proyecto-final-6a3e8.firebaseio.com/formulario">Todos los casos</a>
+        </div>
+
+        <h1 class="titulo">Formulario de Reclamación</h1>
+    </div>
+
+    <div class="Formulario">
+        <form id="formulario1">
+            <b>Tipo de Problema</b>
+
+            <br>
+
+            <select class="problema">
+                <option value="Energia Electrica">Energia Electrica</option>
+
+                <option value="Agua">Agua</option>
+
+                <option value="Basura">Basura</option>
+
+                <option value="Calle">Calle</option>
+            </select>
+
+            <br>
+            <br>
+
+            <b>Fecha</b>
+
+            <br>
+
+            <input
+                type="date"
+                name="fecha"
+                min="2018-03-25"
+                max="2018-07-25"
+                step="2"
+                class="fecha"
+            ></input>
+
+            <!-- Campo de entrada de hora -->
+
+            <div id="localizacion">
+                <button
+                    type="button"
+                    id="obtener"
+                    style="margin:30px;"
+                    class="boton1"
+                >Obtener mi localización</button>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <b>Comentario</b>
+
+            <br>
+
+            <textarea
+                rows="4"
+                cols="50"
+                class="Comentario"
+            ></textarea>
+
+            <br>
+            <br>
+            <b></b>
+            <br>
+
+            <form
+                enctype="multipart/form-data"
+                action="uploader.php"
+                method="POST"
+            >
+                <input
+                    name="uploadedfile"
+                    type="file"
+                    class="archivo"
+                ></input>
+
+                <br>
+                <br>
+
+                <b>Estado de la Solicitud</b>
+
+                <br>
+
+                <select class="estado">
+                    <option value="Pendiente">Pendiente</option>
+                </select>
+
+                <input
+                    type="button"
+                    value="Guardar"
+                    id="guardar_formulario"
+                    class="boton"
+                ></input>
+            </form>
+        </form>
+    </div>
+    
+
+ 
+      
+      </script>
+    <!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=ESCRIBE_AQUI_TU_API_KEY&callback=initMap">
+  </script>-->
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="../js/pagina1.js"></script>
+    
+</body>
+</html>

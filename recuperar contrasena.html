@@ -1,0 +1,46 @@
+<html> 
+<head> 
+     <meta charset="utf-8"></meta>
+<title>Cambiar Contraseña</title> 
+
+<link
+rel="stylesheet"
+type="text/css"
+media="screen"
+href="..//css/recuperar contrasena.css"
+></link>
+
+<script> 
+function comprobarClave(){ 
+   	clave1 = document.f1.clave1.value 
+   	clave2 = document.f1.clave2.value 
+
+   	if (clave1 == clave2) 
+      	alert("Las dos claves son iguales...\n Puedes proseguir") 
+   	else 
+      	alert("Las dos claves son distintas...\nIntentalo de nuevo") 
+} 
+</script> 
+</head> 
+
+<body> 
+
+<h1>Cambiar Contraseña</h1> 
+ 
+<h3> Digite su nueva contraseña.  </h2>
+
+
+    Digita tu correo: <input type="email"size="30"> 
+<form action="" name="f1"> 
+Contraseña: <input type="password" name="clave1" size="34"> 
+<br> 
+Repite contraseña: <input type="password" name="clave2" size="30"> 
+<br> 
+<input type="button" value="Cambiar Contraseña" onClick="comprobarClave()">
+
+</form> 
+
+
+
+</body> 
+</html>
